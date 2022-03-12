@@ -1,0 +1,17 @@
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+#toAppend{
+    overflow:scroll;
+    height: 650px;
+    width: 250px;
+    text-align: center;
+    float: left ;
+}
+.calendar{
+    width: 1200px;
+    height: 630px;
+    margin-left: 20px;
+    float:left;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link href='fullcalendar/lib/main.css' rel='stylesheet' />
+    <script src='fullcalendar/lib/main.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      fetch('http://localhost:3000/all')
+        .then(response => response.json())
+        .then(json => {
+        for (let item of json) {
+          toAppend.innerHTML += `
+          <div style="background-color:${item.color}">
+          <form action="http://localhost:3000/delete/:${item._id}">
+          <p>${item.title}<br>${item.statut}</p>
+          <p>${item.start}/${item.end}</p>
+          <button onclick="alert('La tâche: [ ${item.title} ] va être effacée')" value=${item._id}>effacer</button>
+        </form>
+        </div>`;
+        }
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl,{
+          initialView: 'dayGridMonth',
+          selectable: true,
+          events:json,
+          select: function(info) {
+          document.getElementById("start").value = info.startStr;
+          document.getElementById("end").value =  info.endStr;
+            }
+        });
+          calendar.render();
+          });
+        });
+    </script>
+  </head>
+  <body>
+    <h2>TodoList</h2>
+    <div id="toAppend"></div>
+    <div style="text-align: center;">
+      <form action="/add" method="POST">
+        <input type="date" id="start" name="start" required></input>
+        <input type="date" id="end" name="end" required></input>
+        <input type="text" id="title" name="title" placeholder="Title" required></input>
+        <input type="submit" id="submit"  value="Submit"></input>
+        <input type="hidden" id="statut" name="statut" placeholder="statut" value="En cours"></input><br>
+      </form>
+    </div>
+    <div class="calendar" id='calendar'></div>
+  </body>
+</html>

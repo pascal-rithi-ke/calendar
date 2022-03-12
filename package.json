@@ -1,0 +1,19 @@
+{
+  "name": "calendrier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "epxress": "0.0.1-security",
+    "express": "^4.17.3",
+    "express-flash": "0.0.2",
+    "mongoose": "^6.2.5",
+    "nodemon": "^2.0.15"
+  }
+}
