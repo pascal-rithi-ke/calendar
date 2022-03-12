@@ -1,3 +1,3 @@
 # calendar
 
-TodoList planning app
+TodoList planning app with NodeJs-Express-MongoDB
