@@ -1,10 +1,12 @@
-#TodoList planning app with NodeJs-Express-MongoDB
-
-#Add task
+<h1>TodoList planning app with NodeJs-Express-MongoDB</h1>
+<p>Add task</p>
 ![alt text](https://github.com/pascal-rithi-ke/calendar/blob/main/img_todo/todo1.PNG)
-#Task added
+<br/>
+<p>Task added</p>
 ![alt text](https://github.com/pascal-rithi-ke/calendar/blob/main/img_todo/todo2.PNG)
-#View task added in Mongodb Compass
+<br/>
+<p>View task added in Mongodb Compass</p>
 ![alt text](https://github.com/pascal-rithi-ke/calendar/blob/main/img_todo/todo3.PNG)
-#Delete task
+<br/>
+<p>Delete task</p>
 ![alt text](https://github.com/pascal-rithi-ke/calendar/blob/main/img_todo/todo4.PNG)
